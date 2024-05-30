@@ -10,6 +10,11 @@ function logger(req,res,next){
 }
 app.use(logger)
 app.use(login)
+// 错误处理中间件
+app.use('*',(req,res)=>{
+    res.status(404)
+    res.send('404')
+})
 app.listen(3000,()=>{
     console.log('服务已启动...')
 })
