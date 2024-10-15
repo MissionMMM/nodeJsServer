@@ -22,12 +22,13 @@ const corsOptions = {
     allowedHeaders: ['Content-Type', 'Authorization'] // 允许的头部
 };
 
-// 启用CORS
-app.use(cors(corsOptions));
 
 const usersRouter = require('./routes/users');
 
 const app = express();
+
+// 启用CORS
+app.use(cors(corsOptions));
 
 app.use(logger('dev'));
 app.use(express.json());
