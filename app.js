@@ -24,6 +24,7 @@ const corsOptions = {
 
 
 const usersRouter = require('./routes/users');
+const instrumentRouter = require('./routes/instrument');
 
 const app = express();
 
@@ -36,6 +37,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/instrument', instrumentRouter);
 app.use('/users', usersRouter);
 
 module.exports = app;
