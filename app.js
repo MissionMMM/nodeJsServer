@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
 const allowedOrigins = [
-    'http://yqtmisn.top',
+    'https://yqtmisn.top',
     'http://localhost:3000'
 ];
 
